@@ -263,122 +263,6 @@ body {
 .byebye:hover {
   transform: scale(0.2) !important;
 }
-.gallery {
-  width: 80%;
-  padding-left: 10%;
-  display: grid;
-  grid-column-gap: 8px;
-  grid-row-gap: 8px;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  grid-auto-rows: 8px;
-}
-.gallery img {
-  max-width: 100%;
-  border-radius: 8px;
-  box-shadow: 0 0 16px #333;
-  transition: all 1.5s ease;
-}
-.gallery img:hover {
-  box-shadow: 0 0 32px #333;
-}
-.gallery .content {
-  padding: 4px;
-}
-.gallery .gallery-item {
-  transition: grid-row-start 300ms linear;
-  transition: transform 300ms ease;
-  transition: all 0.5s ease;
-  cursor: pointer;
-}
-.gallery .gallery-item:hover {
-  transform: scale(1.025);
-}
-@media (max-width: 600px) {
-  .gallery {
-    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
-  }
-}
-@media (max-width: 400px) {
-  .gallery {
-    grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
-  }
-}
-@-moz-keyframes zoomin {
-  0% {
-    max-width: 50%;
-    transform: rotate(-30deg);
-    filter: blur(4px);
-  }
-  30% {
-    filter: blur(4px);
-    transform: rotate(-80deg);
-  }
-  70% {
-    max-width: 50%;
-    transform: rotate(45deg);
-  }
-  100% {
-    max-width: 100%;
-    transform: rotate(0deg);
-  }
-}
-@-webkit-keyframes zoomin {
-  0% {
-    max-width: 50%;
-    transform: rotate(-30deg);
-    filter: blur(4px);
-  }
-  30% {
-    filter: blur(4px);
-    transform: rotate(-80deg);
-  }
-  70% {
-    max-width: 50%;
-    transform: rotate(45deg);
-  }
-  100% {
-    max-width: 100%;
-    transform: rotate(0deg);
-  }
-}
-@-o-keyframes zoomin {
-  0% {
-    max-width: 50%;
-    transform: rotate(-30deg);
-    filter: blur(4px);
-  }
-  30% {
-    filter: blur(4px);
-    transform: rotate(-80deg);
-  }
-  70% {
-    max-width: 50%;
-    transform: rotate(45deg);
-  }
-  100% {
-    max-width: 100%;
-    transform: rotate(0deg);
-  }
-}
-@keyframes zoomin {
-  0% {
-    max-width: 50%;
-    transform: rotate(-30deg);
-    filter: blur(4px);
-  }
-  30% {
-    filter: blur(4px);
-    transform: rotate(-80deg);
-  }
-  70% {
-    max-width: 50%;
-    transform: rotate(45deg);
-  }
-  100% {
-    max-width: 100%;
-    transform: rotate(0deg);
-  }
-}
 
 footer {
   background-color: #121315;
@@ -474,17 +358,168 @@ div.social {
 
   text-decoration: none;
 }
-#footer-bg {
-}
-.footer-menu a:hover {
-  color: #27bcda;
-}
+
 .copyright p {
-  font-size: 0.9em;
-  text-align: left;
+  font-size: 1.2em;
+  text-align: center;
+  font-weight: 600;
+  font-size: 20px;
 }
 @media screen and (max-width: 850px) {
   .row.primary {
     grid-template-columns: 1fr;
+  }
+}
+
+#footer-bg {
+  display: flex;
+  justify-content: center;
+  background-color: #0f57af;
+  color: black;
+  font-weight: 600;
+}
+.footer-menu a:hover {
+  color: #27bcda;
+}
+
+/* Gallery */
+
+.main-gallery {
+  width: 100%;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0px 60px 0px;
+}
+
+.main-gallery h1 {
+  margin: 10px 0px 30px 0px;
+  font-family: cursive;
+  color: rgb(0, 6, 90);
+  font-size: 50px;
+}
+
+.gallery {
+  display: grid;
+  width: 90%;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+.gallery__item {
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.gallery__item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: 0.3s ease-in-out;
+}
+
+.gallery__item img:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 950px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 550px) {
+  .gallery {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/*Image modal*/
+
+.modal {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.733);
+  margin-top: -1px;
+  animation: zoom 0.3s ease-in-out;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+.modal img {
+  position: relative;
+  width: 50%;
+  height: 70%;
+  top: 10%;
+  object-fit: contain;
+}
+
+.closeBtn {
+  color: rgba(255, 255, 255, 0.87);
+  font-size: 25px;
+  position: absolute;
+  top: 100px;
+  right: 350px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.closeBtn:hover {
+  color: rgb(255, 255, 255);
+}
+
+@media only screen and (min-width: 1500px) {
+  .modal img {
+    position: relative;
+    width: 800px;
+    height: 800px;
+    top: 10%;
+    object-fit: contain;
+  }
+  .modal i {
+    top: 250px;
+    right: 450px;
+    width: 100px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .modal img {
+    position: relative;
+    width: 70%;
+    height: 90%;
+    top: 10%;
+    object-fit: contain;
+  }
+  .modal i {
+    top: 10px;
+    right: 50px;
+    width: 100px;
+  }
+}
+@media only screen and (max-width: 950px) {
+  .modal img {
+    position: relative;
+    width: 70%;
+    height: 90%;
+    top: 10%;
+    object-fit: contain;
+  }
+  .modal i {
+    top: 250px;
+    right: 0;
+    width: 100px;
   }
 }
