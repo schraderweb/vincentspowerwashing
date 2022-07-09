@@ -14,6 +14,9 @@ Tags: blog, thrive, lead capture
 .copyright {
   background-color: black;
 }
+.copyright p a {
+  text-decoration: underline;
+}
 
 .centertext {
   text-align: center;
@@ -122,9 +125,10 @@ body {
   left: -110%;
   width: 100%;
   height: 100%;
-  background: #007cba;
+  /* background: #007cba; */
   transition: 0.7s;
   transform: skewX(10deg);
+  cursor: pointer;
 }
 .single-service:hover span {
   left: 110%;
@@ -377,7 +381,9 @@ div.social {
   background-color: #0f57af;
   color: black;
   font-weight: 600;
+  text-transform: uppercase;
 }
+
 .footer-menu a:hover {
   color: #27bcda;
 }
@@ -464,7 +470,9 @@ div.social {
   width: 50%;
   height: 70%;
   top: 10%;
-  object-fit: contain;
+  object-fit: cover;
+
+  border: 5px white solid;
 }
 
 .closeBtn {
