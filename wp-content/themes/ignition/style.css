@@ -23,6 +23,7 @@ Tags: blog, thrive, lead capture
 }
 
 input[type="text"],
+input[type="email"],
 select,
 textarea {
   width: 100%;
@@ -465,14 +466,14 @@ div.social {
     transform: scale(1);
   }
 }
+
 .modal img {
   position: relative;
-  width: 50%;
+  width: 60%;
   height: 70%;
   top: 10%;
   object-fit: cover;
-
-  border: 5px white solid;
+  border: 10px white solid;
 }
 
 .closeBtn {
@@ -495,39 +496,11 @@ div.social {
     width: 800px;
     height: 800px;
     top: 10%;
-    object-fit: contain;
+    object-fit: cover;
   }
   .modal i {
-    top: 250px;
+    top: 200px;
     right: 450px;
-    width: 100px;
-  }
-}
-@media only screen and (max-width: 500px) {
-  .modal img {
-    position: relative;
-    width: 70%;
-    height: 90%;
-    top: 10%;
-    object-fit: contain;
-  }
-  .modal i {
-    top: 10px;
-    right: 50px;
-    width: 100px;
-  }
-}
-@media only screen and (max-width: 950px) {
-  .modal img {
-    position: relative;
-    width: 70%;
-    height: 90%;
-    top: 10%;
-    object-fit: contain;
-  }
-  .modal i {
-    top: 250px;
-    right: 0;
     width: 100px;
   }
 }
