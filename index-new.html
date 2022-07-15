@@ -1304,14 +1304,19 @@ Click the help icon above to learn more.
         max-width: 1080px !important;
         max-width: var(--page-section-max-width) !important;
       }
-
-      body.tcb-full-header .thrv_header,
-      body.tcb-full-footer .thrv_footer {
-        width: 100vw;
-        left: 50%;
-        right: 50%;
-        margin-left: -50vw !important;
-        margin-right: -50vw !important;
+      .thrv_icon.thrv_wrapper {
+        margin-left: 100%;
+      }
+      .tcb-icon {
+        padding-left: 70;
+      }
+      @media only screen and (min-width: 1500px) {
+        .tcb-icon {
+          padding-left: 130px;
+        }
+        .thrv_icon.thrv_wrapper {
+          margin-left: 150px;
+        }
       }
     </style>
 
@@ -1557,8 +1562,9 @@ Click the help icon above to learn more.
                   class="tve-page-section-in tve_empty_dropzone"
                   data-css="tve-u-15e69a3bbc1"
                 >
+                  <!---working--->
                   <div
-                    class="thrv_wrapper thrv-columns tcb-window-width"
+                    class="top-info thrv_wrapper thrv-columns tcb-window-width"
                     data-css="tve-u-15e69b10967"
                     style="width: 1390px; left: -164px"
                   >
@@ -1625,6 +1631,7 @@ Click the help icon above to learn more.
                               >
                                 <div class="tcb-col tve_empty_dropzone">
                                   <div
+                                    id="top-icons"
                                     class="thrv_wrapper thrv_icon tcb-icon-display tcb-tablet-hidden tcb-mobile-hidden"
                                     data-css="tve-u-15e73696cbd"
                                   >
@@ -1713,6 +1720,7 @@ Click the help icon above to learn more.
                               >
                                 <div class="tcb-col tve_empty_dropzone">
                                   <div
+                                    id="top-icons2"
                                     class="thrv_wrapper thrv_icon tcb-icon-display tcb-tablet-hidden tcb-mobile-hidden"
                                     data-css="tve-u-1601e37f711"
                                   >
@@ -1767,6 +1775,7 @@ Click the help icon above to learn more.
                       </div>
                     </div>
                   </div>
+                  <!---END working--->
                 </div>
               </div>
               <div
@@ -2578,12 +2587,11 @@ Click the help icon above to learn more.
           <div class="column about">
             <a href="index.html">
               <p>
-                <img src="/wp-content/uploads/2017/12/logo.png" width="200" />
+                <img src="/wp-content/uploads/2017/12/logo.png" width="250" />
               </p>
             </a>
           </div>
-
-          <div class="column links">
+          <div class="column links menu">
             <h3></h3>
 
             <ul>
