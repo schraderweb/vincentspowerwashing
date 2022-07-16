@@ -579,6 +579,7 @@
         margin-left: 0px !important;
         margin-right: 0px !important;
         padding-right: 1px !important;
+        z-index:0;
       }
 
       [data-css="tve-u-15e736dfdf9"] {
@@ -1284,6 +1285,7 @@
         margin-right: auto !important;
       }
     }
+
   </style>
   <style type="text/css" id="tve_head_custom_css" class="tve_user_custom_style">
     body #change-margin h1 {
@@ -1313,6 +1315,7 @@
         color: #000 !important;
       }
     }
+
   </style>
   <style type="text/css" id="wp-custom-css">
     /*
@@ -1379,6 +1382,10 @@ Click the help icon above to learn more.
       .thrv_icon.thrv_wrapper {
         margin-left: 150px;
       }
+    }
+    #bottom-section {
+      z-index:0;
+      position: absolute;
     }
   </style>
 
@@ -1770,7 +1777,7 @@ Click the help icon above to learn more.
             <div class="tve-page-section-in tve_empty_dropzone" data-css="tve-u-15e7137723b">
             </div>
           </div>
-          <div class="thrv_wrapper thrv-page-section tcb-window-width" style="width: 1390px; left: -155px"
+          <div id="bottom-section" class="thrv_wrapper thrv-page-section tcb-window-width" style="width: 1390px; left: -155px"
             data-css="tve-u-15e737190f2">
             <div class="tve-page-section-out" data-css="tve-u-15e718b7c0e" data-clip-id="59f70ace0c38c">
               <svg width="0" height="0" class="tve-decoration-svg">

@@ -490,6 +490,7 @@ div.social {
   width: 60%;
   height: 65%;
   top: 10%;
+  margin-top: -80px;
   object-fit: cover;
   border: 10px white solid;
 }
@@ -498,7 +499,7 @@ div.social {
   color: rgba(255, 255, 255, 0.87);
   font-size: 25px;
   position: absolute;
-  top: 100px;
+  top: 60px;
   right: 350px;
   cursor: pointer;
   transition: 0.2s ease-in-out;

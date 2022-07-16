@@ -934,6 +934,9 @@
           background-attachment: scroll, scroll !important;
           background-repeat: no-repeat, no-repeat !important;
         }
+        /* [data-css="tve-u-15e7136f9d9"] {
+          background-color: rgb(244, 0, 0) !important;
+        } */
         [data-css="tve-u-15e7136d315"] {
           max-width: 1080px;
           text-align: center;
@@ -1595,8 +1598,7 @@ Click the help icon above to learn more.
                                   height="205"
                                   sizes="(max-width: 500px) 100vw, 500px"
                                 />
-                              </a>
-                            </span>
+                              </a></span>
                           </div>
                         </div>
                       </div>
@@ -1760,7 +1762,8 @@ Click the help icon above to learn more.
                                         data-css="tve-u-15e77b8512f"
                                         style="color: rgb(246, 169, 65)"
                                         ><br /></span
-                                      >&nbsp;&nbsp; Lapeer, Michigan
+                                      >&nbsp;
+                                      &nbsp; Lapeer, Michigan
                                     </p>
                                   </div>
                                 </div>
@@ -1773,23 +1776,11 @@ Click the help icon above to learn more.
                   </div>
                 </div>
               </div>
-              <div
-                class="thrv_wrapper thrv-page-section tve_empty_dropzone tcb-window-width"
-              >
-            <h1 class="centertext"><strong>Contact Us</strong></h1>
+                <div style="text-align:center; padding-top:150px;">
+                  <h1>Thank You</h1>
+                  <p>You form has successfully submited. We will get in touch with you as soon as possible</p>
+                  <p>Please click <a href="/index.html">here</a>. To go to Home</p>
                 </div>
-				<div class="container">
-					<form action="https://formsubmit.co/bret@schrader.co" method="POST">
-					  <label for="name">Name:</label>
-					  <input type="text" id="name" name="name" placeholder="Your name.." required>
-					  <label for="email">Email:</label>
-					  <input type="email" id="email" name="email" placeholder="Your email.." required>
-					  <label for="message">Message:</label>
-					  <textarea id="message" name="message" placeholder="Write something.." style="height:200px" required></textarea>
-				    <input type="hidden" name="_next" value="https://www.vincentspowerwashing.com/thank-you.html/">
-					  <input type="submit" value="Submit">
-					</form>
-				</div>
                 <div
                   class="tve-page-section-in tve_empty_dropzone"
                   data-css="tve-u-15e7137723b"
@@ -1801,7 +1792,6 @@ Click the help icon above to learn more.
                 style="width: 1390px; left: -155px"
                 data-css="tve-u-15e737190f2"
               >
-
                 <div
                   class="tve-page-section-out"
                   data-css="tve-u-15e718b7c0e"
@@ -2117,7 +2107,6 @@ Click the help icon above to learn more.
                                       is organized with minimal cleanup on a
                                       daily basis. Thank!!
                                     </p>
-                                    <br />
                                   </div>
                                   <div
                                     class="tcb-clear"
@@ -2269,7 +2258,6 @@ Click the help icon above to learn more.
                                       free Consultation.Thank you I highly
                                       recomend!
                                     </p>
-                                    <br />
                                   </div>
                                   <div
                                     class="tcb-clear"
@@ -2514,12 +2502,12 @@ Click the help icon above to learn more.
           <div id="footer-bg" class="row primary">
             <div class="column about">
               <p>
-                <img src="/wp-content/uploads/2017/12/logo.png" width="200" />
+                <img src="/wp-content/uploads/2017/12/logo.png" />
               </p>
             </div>
   
             <div class="column links">
-              <h3></h3>
+              <h3>Some Links</h3>
   
               <ul>
                 <li>
@@ -2538,7 +2526,7 @@ Click the help icon above to learn more.
             </div>
   
             <div class="column links">
-              <h3></h3>
+              <h3>Some Links</h3>
               <ul>
                 <li>
                   <a href="/contact-us/index.html">CONTACT US</a>
@@ -2547,7 +2535,7 @@ Click the help icon above to learn more.
                   <a href="/testimonials/index.html">TESTIMONALS</a>
                 </li>
                 <li>
-                  <a href="/privacy-policy/index.html">Privacy Policy</a>
+                <a href="/privacy-policy/index.html">Privacy Policy</a>
                 </li>
                 <li>
                   <a href="/terms-of-services/index.html">Terms Of Service</a>
@@ -2555,6 +2543,7 @@ Click the help icon above to learn more.
               </ul>
             </div>
           </div>
+  
           <div class="row copyright">
             <p>
               Developed and hosted by
@@ -2565,61 +2554,40 @@ Click the help icon above to learn more.
         </footer>
       </div>
     </div>
+    <script async src="https://kit.fontawesome.com/6cc05e1e8e.js" crossorigin="anonymous"></script>
+<script>
+        const images = document.querySelectorAll(".gallery__item img");
+let imgSrc;
+// get images src onclick
+images.forEach((img) => {
+    img.addEventListener("click", (e) => {
+        imgSrc = e.target.src;
+        //run modal function
+        imgModal(imgSrc);
+    });
+});
+//creating the modal
+let imgModal = (src) => {
+    const modal = document.createElement("div");
+    modal.setAttribute("class", "modal");
+    //add the modal to the main section or the parent element
+    document.querySelector(".main-gallery").append(modal);
+    //adding image to modal
+    const newImage = document.createElement("img");
+    newImage.setAttribute("src", src);
+    //creating the close button
+    const closeBtn = document.createElement("i");
+    closeBtn.setAttribute("class", "fas fa-times closeBtn");
+    //close function
+    closeBtn.onclick = () => {
+        modal.remove();
+    };
+    modal.append(newImage, closeBtn);
+};
+</script>
     <script type="text/javascript">
-      var TVE_Event_Manager_Registered_Callbacks =
-        TVE_Event_Manager_Registered_Callbacks || {};
-      TVE_Event_Manager_Registered_Callbacks.thrive_animation = function (
-        trigger,
-        action,
-        config
-      ) {
-        var $element = jQuery(this),
-          $at = $element.closest(".tcb-col, .thrv_wrapper");
-        if ($at.length === 0) {
-          $at = $element;
-        }
-        if (!config.loop && $at.data("a-done")) {
-          return;
-        }
-        $at.data("a-done", 1);
-        $at
-          .removeClass(function (i, cls) {
-            return cls
-              .split(" ")
-              .filter(function (item) {
-                return item.indexOf("tve_anim_") === 0;
-              })
-              .join(" ");
-          })
-          .addClass("tve_anim_" + config.anim)
-          .removeClass("tve_anim_start");
-        if (config.loop) {
-          $at.addClass("tve_anim_start");
-          if (trigger === "mouseover") {
-            $element.one("mouseleave", function () {
-              $at.removeClass("tve_anim_start");
-            });
-          }
-          if (trigger === "tve-viewport") {
-            $element.one("tve-viewport-leave", function () {
-              /**
-               * double check for viewport
-               * animation in animation triggers weird behaviors
-               */
-              if (!TCB_Front.isInViewport($element)) {
-                $at.removeClass("tve_anim_start");
-              }
-            });
-          }
-        } else {
-          setTimeout(function () {
-            $at.addClass("tve_anim_start");
-          }, 50);
-        }
-        return false;
-      };
-    </script>
-    <script type="text/javascript">
+
+
       (function ($) {
         var _DELTA = 200, //for slide top animation {transform: translateY(-200px)}
           $window = $(window),
