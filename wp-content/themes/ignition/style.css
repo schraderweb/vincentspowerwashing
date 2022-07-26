@@ -17,6 +17,9 @@ Tags: blog, thrive, lead capture
 .copyright p a {
   text-decoration: underline;
 }
+.copyright p a:hover {
+  color: red;
+}
 
 .centertext {
   text-align: center;
